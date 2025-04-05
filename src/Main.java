@@ -1,8 +1,10 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Задание 1.");
 
-        int [] box = new int [3];
+        int[] box = new int[3];
         box[0] = 1;
         box[1] = 2;
         box[2] = 3;
@@ -14,7 +16,7 @@ public class Main {
         System.out.println("  ");
 
 
-        double [] box1 = { 1.57, 7.654, 9.986 };
+        double[] box1 = {1.57, 7.654, 9.986};
         box1[0] = 1.57;
         box1[1] = 7.654;
         box1[2] = 9.986;
@@ -24,37 +26,35 @@ public class Main {
 
         System.out.println("Задание 2.");
 
-        int[] apple  = {12, 45, 98, 82, 86, 32, 20, 99, 65, 7, 4, 678};
-        for (int a = 0; a < apple.length; a++) {
-            System.out.print(apple[a] + "  ");
+        int[] number = {1, 2, 3, 10, 5, 6, 7, 8, 9, 18};
+        int[] revers = new int[number.length];
+        for (int i = 0; i < revers.length; i++) {
+            revers[i] = number[number.length - 1 - i];
         }
+        System.out.println(Arrays.toString(number));
 
-        System.out.print("  ");
-        System.out.println();
 
         System.out.println("Задание 3.");
 
-        System.out.println(box[2]);
-        System.out.println(box[1]);
-        System.out.println(box[0]);
+        int[] numbers = new int[]{1, 2, 3, 10, 5, 6, 7, 8, 9, 18};
+        for (int a = numbers.length - 1; a >= 0; a--) {
+            System.out.print(numbers[a]);
+            if (a >= 0) {
+                System.out.print(", ");
+            }
+        }
 
         System.out.print("  ");
         System.out.println();
 
-        System.out.println(box1[2]);
-        System.out.println(box1[1]);
-        System.out.println(box1[0]);
-
         System.out.println("Задание 4.");
 
-        int [] milk = {20, 25, 34, 37, 40, 41, 44, 53, 54, 61, 62,77};
-        int d = milk[2];
-        for (int plum = 0; plum < milk.length; plum = plum + 2) {
-            if (plum == milk.length + 2) {
-                System.out.println(milk[plum]);
-                break;
-            }
-            System.out.print(milk[plum] + "  ");
-            }
-        }
+        int[] milk = {20, 26, 34, 38, 40, 42, 44, 56, 54, 60, 62, 78};
+
+        System.out.println(Arrays.toString(milk));
+
     }
+
+    private static class Array {
+    }
+}
